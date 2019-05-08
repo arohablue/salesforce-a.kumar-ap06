@@ -228,6 +228,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfMh9</field>
+            <label>Contact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpr</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -238,6 +242,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpt</field>
             <label>Main Competitor(s)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfNJX</field>
+            <label>orderId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpu</field>
@@ -281,9 +289,11 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N0K00000KfMh9</field>
             <field>00N0K00000KnCpr</field>
             <field>00N0K00000KnCps</field>
             <field>00N0K00000KnCpt</field>
+            <field>00N0K00000KfNJX</field>
             <field>00N0K00000KnCpu</field>
             <field>00N0K00000KnCpv</field>
         </opportunityListFieldsUnselectedSettings>
@@ -442,6 +452,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfMh9</field>
+            <label>Contact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpr</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -452,6 +466,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpt</field>
             <label>Main Competitor(s)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfNJX</field>
+            <label>orderId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpu</field>
@@ -495,9 +513,11 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N0K00000KfMh9</field>
             <field>00N0K00000KnCpr</field>
             <field>00N0K00000KnCps</field>
             <field>00N0K00000KnCpt</field>
+            <field>00N0K00000KfNJX</field>
             <field>00N0K00000KnCpu</field>
             <field>00N0K00000KnCpv</field>
         </opportunityListFieldsUnselectedSettings>
@@ -660,6 +680,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfMh9</field>
+            <label>Contact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpr</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -670,6 +694,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpt</field>
             <label>Main Competitor(s)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfNJX</field>
+            <label>orderId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpu</field>
@@ -714,9 +742,11 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N0K00000KfMh9</field>
             <field>00N0K00000KnCpr</field>
             <field>00N0K00000KnCps</field>
             <field>00N0K00000KnCpt</field>
+            <field>00N0K00000KfNJX</field>
             <field>00N0K00000KnCpu</field>
             <field>00N0K00000KnCpv</field>
         </opportunityListFieldsUnselectedSettings>
@@ -875,6 +905,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfMh9</field>
+            <label>Contact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpr</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -885,6 +919,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpt</field>
             <label>Main Competitor(s)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfNJX</field>
+            <label>orderId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpu</field>
@@ -928,9 +966,11 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N0K00000KfMh9</field>
             <field>00N0K00000KnCpr</field>
             <field>00N0K00000KnCps</field>
             <field>00N0K00000KnCpt</field>
+            <field>00N0K00000KfNJX</field>
             <field>00N0K00000KnCpu</field>
             <field>00N0K00000KnCpv</field>
         </opportunityListFieldsUnselectedSettings>
@@ -1093,6 +1133,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfMh9</field>
+            <label>Contact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpr</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -1103,6 +1147,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpt</field>
             <label>Main Competitor(s)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfNJX</field>
+            <label>orderId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpu</field>
@@ -1147,9 +1195,11 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N0K00000KfMh9</field>
             <field>00N0K00000KnCpr</field>
             <field>00N0K00000KnCps</field>
             <field>00N0K00000KnCpt</field>
+            <field>00N0K00000KfNJX</field>
             <field>00N0K00000KnCpu</field>
             <field>00N0K00000KnCpv</field>
         </opportunityListFieldsUnselectedSettings>
@@ -1308,6 +1358,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfMh9</field>
+            <label>Contact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpr</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -1318,6 +1372,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpt</field>
             <label>Main Competitor(s)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfNJX</field>
+            <label>orderId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpu</field>
@@ -1361,9 +1419,11 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N0K00000KfMh9</field>
             <field>00N0K00000KnCpr</field>
             <field>00N0K00000KnCps</field>
             <field>00N0K00000KnCpt</field>
+            <field>00N0K00000KfNJX</field>
             <field>00N0K00000KnCpu</field>
             <field>00N0K00000KnCpv</field>
         </opportunityListFieldsUnselectedSettings>
@@ -1522,6 +1582,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfMh9</field>
+            <label>Contact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpr</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -1532,6 +1596,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpt</field>
             <label>Main Competitor(s)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfNJX</field>
+            <label>orderId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpu</field>
@@ -1575,9 +1643,11 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N0K00000KfMh9</field>
             <field>00N0K00000KnCpr</field>
             <field>00N0K00000KnCps</field>
             <field>00N0K00000KnCpt</field>
+            <field>00N0K00000KfNJX</field>
             <field>00N0K00000KnCpu</field>
             <field>00N0K00000KnCpv</field>
         </opportunityListFieldsUnselectedSettings>
@@ -1736,6 +1806,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfMh9</field>
+            <label>Contact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpr</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -1746,6 +1820,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpt</field>
             <label>Main Competitor(s)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfNJX</field>
+            <label>orderId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpu</field>
@@ -1789,9 +1867,11 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N0K00000KfMh9</field>
             <field>00N0K00000KnCpr</field>
             <field>00N0K00000KnCps</field>
             <field>00N0K00000KnCpt</field>
+            <field>00N0K00000KfNJX</field>
             <field>00N0K00000KnCpu</field>
             <field>00N0K00000KnCpv</field>
         </opportunityListFieldsUnselectedSettings>
@@ -1954,6 +2034,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfMh9</field>
+            <label>Contact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpr</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -1964,6 +2048,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpt</field>
             <label>Main Competitor(s)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfNJX</field>
+            <label>orderId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpu</field>
@@ -2008,9 +2096,11 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N0K00000KfMh9</field>
             <field>00N0K00000KnCpr</field>
             <field>00N0K00000KnCps</field>
             <field>00N0K00000KnCpt</field>
+            <field>00N0K00000KfNJX</field>
             <field>00N0K00000KnCpu</field>
             <field>00N0K00000KnCpv</field>
         </opportunityListFieldsUnselectedSettings>
@@ -2169,6 +2259,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfMh9</field>
+            <label>Contact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpr</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -2179,6 +2273,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpt</field>
             <label>Main Competitor(s)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfNJX</field>
+            <label>orderId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpu</field>
@@ -2222,9 +2320,11 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N0K00000KfMh9</field>
             <field>00N0K00000KnCpr</field>
             <field>00N0K00000KnCps</field>
             <field>00N0K00000KnCpt</field>
+            <field>00N0K00000KfNJX</field>
             <field>00N0K00000KnCpu</field>
             <field>00N0K00000KnCpv</field>
         </opportunityListFieldsUnselectedSettings>
@@ -2383,6 +2483,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfMh9</field>
+            <label>Contact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpr</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -2393,6 +2497,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpt</field>
             <label>Main Competitor(s)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfNJX</field>
+            <label>orderId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpu</field>
@@ -2436,9 +2544,11 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N0K00000KfMh9</field>
             <field>00N0K00000KnCpr</field>
             <field>00N0K00000KnCps</field>
             <field>00N0K00000KnCpt</field>
+            <field>00N0K00000KfNJX</field>
             <field>00N0K00000KnCpu</field>
             <field>00N0K00000KnCpv</field>
         </opportunityListFieldsUnselectedSettings>
@@ -2597,6 +2707,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfMh9</field>
+            <label>Contact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpr</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -2607,6 +2721,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpt</field>
             <label>Main Competitor(s)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N0K00000KfNJX</field>
+            <label>orderId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N0K00000KnCpu</field>
@@ -2650,9 +2768,11 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N0K00000KfMh9</field>
             <field>00N0K00000KnCpr</field>
             <field>00N0K00000KnCps</field>
             <field>00N0K00000KnCpt</field>
+            <field>00N0K00000KfNJX</field>
             <field>00N0K00000KnCpu</field>
             <field>00N0K00000KnCpv</field>
         </opportunityListFieldsUnselectedSettings>
