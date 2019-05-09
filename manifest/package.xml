@@ -60,6 +60,7 @@
     <name>ApexPage</name>
   </types>
   <types>
+    <members>*</members>
     <members>demoClassTrigger</members>
     <members>PushNotificationTrigger</members>
     <members>RejectDuplicateFavorite</members>

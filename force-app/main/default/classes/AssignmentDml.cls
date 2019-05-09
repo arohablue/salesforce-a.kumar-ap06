@@ -5,11 +5,11 @@ public class AssignmentDml {
         String lastName;
         String email;
         String phone;
-        String billAmount;
+        Decimal billAmount;
         
         public Contacts(){}
 
-        public Contacts(String firstName, String lastName, String email, String phone, String billAmount) {
+        public Contacts(String firstName, String lastName, String email, String phone, Decimal billAmount) {
         	this.firstName =  firstName;
             this.lastName = lastName;
             this.email = email;
@@ -133,13 +133,12 @@ public class AssignmentDml {
     }
 
     // Function to create new opportunity
-    Public  Opportunity createOpportunity( String amount){
-        Decimal billAmountD = decimal.valueOf(amount);
+    Public  Opportunity createOpportunity( Decimal amount){
 	
 	    List<Opportunity> opprtunityList = new List<Opportunity>(); 
         Date closeDate = Date.newinstance(2019,5,8);
         
-        Opportunity opp = new Opportunity( Amount = billAmountD,  StageName = 'Prospecting', CloseDate= closeDate);
+        Opportunity opp = new Opportunity( Amount = amount,  StageName = 'Prospecting', CloseDate= closeDate);
         
         
         return opp ;
