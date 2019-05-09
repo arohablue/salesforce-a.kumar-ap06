@@ -1,4 +1,4 @@
-trigger TriggerContextVariables on Account (before insert, before update) {
+trigger TriggerContextVariables on Account (before insert, after update) {
     
     
     if (Trigger.isBefore && Trigger.isInsert) {
