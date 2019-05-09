@@ -54,8 +54,8 @@
     <enableStreamingApi>false</enableStreamingApi>
     <label>Order</label>
     <nameField>
-        <displayFormat>O-{0000}</displayFormat>
-        <label>Order ID</label>
+        <displayFormat>ON-{0000}</displayFormat>
+        <label>Order Name</label>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Order</pluralLabel>
