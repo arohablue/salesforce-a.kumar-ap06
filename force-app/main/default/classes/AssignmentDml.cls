@@ -29,7 +29,7 @@ public class AssignmentDml {
         for(Contacts cont : contacts){
             Contact conn = new Contact(FirstName = cont.firstName, LastName = cont.lastName, Phone=cont.phone, Email = cont.email ,AccountId = acctID);
             contactList.add(conn);
-            opprtunityList = createOpportunity(cont.lastName, cont.firstName, cont.billAmount);  
+            opprtunityList.add(createOpportunity(cont.billAmount));  
         }
         
         createCustomer(contactList, opprtunityList);
@@ -104,15 +104,28 @@ public class AssignmentDml {
     
     public void  insertOpportunity( List<Contact> updateContactList , List<Contact> insertContactList, List<Opportunity> opprtunityList) {
          
+        String orderId = '' ;
+        Opportunity op =  [select id, orderId__c from Opportunity order by createdDate DESC limit 1];
+        if(op==null){
+            orderId += 'O-0000';
+        }
+        else {
+            orderId += op.orderId__c;
+        }
+        
         for(Contact cont : insertContactList){
             for(Opportunity opp : opprtunityList){
+                String OppName = cont.LastName + cont.FirstName  ;	
                 opp.Contact__c = cont.Id;
+                opp.Name = OppName + orderId;
             }
         }
         
         for(Contact cont : updateContactList){
             for(Opportunity opp : opprtunityList){
+                String OppName = cont.LastName + cont.FirstName  ;	
                 opp.Contact__c = cont.Id;
+                opp.Name = OppName +orderId;
             }
         }
         
@@ -120,24 +133,16 @@ public class AssignmentDml {
     }
 
     // Function to create new opportunity
-    Public  List<Opportunity>  createOpportunity(String lastName, String firstName , String amount){
+    Public  Opportunity createOpportunity( String amount){
         Decimal billAmountD = decimal.valueOf(amount);
-		String OppName = lastName + firstName  ;	
+	
 	    List<Opportunity> opprtunityList = new List<Opportunity>(); 
         Date closeDate = Date.newinstance(2019,5,8);
         
-        Opportunity op =  [select id, orderId__c from Opportunity order by createdDate DESC limit 1];
-        if(op==null){
-            OppName += 'O-0000';
-        }
-        else {
-            OppName += op.orderId__c;
-        }
+        Opportunity opp = new Opportunity( Amount = billAmountD,  StageName = 'Prospecting', CloseDate= closeDate);
         
-        Opportunity opp = new Opportunity(name = OppName , Amount = billAmountD,  StageName = 'Prospecting', CloseDate= closeDate);
-        opprtunityList.add(opp);
         
-        return opprtunityList ;
+        return opp ;
     }
     
 }
