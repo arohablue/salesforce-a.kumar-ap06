@@ -88,6 +88,11 @@ public class TriggerFactory {
         {
             return new OpportunityHandler();
         }
+        
+        if (soType == Contact.sObjectType)
+        {
+            return new ContactHandler();
+        }
         return null;
     }
 }
