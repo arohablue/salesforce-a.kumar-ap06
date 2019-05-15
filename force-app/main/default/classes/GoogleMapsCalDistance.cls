@@ -4,7 +4,7 @@ public class GoogleMapsCalDistance {
         String distance;
         JSON2Apex j2a ;
         Http http = new Http();
-        String key = 'AIzaSyC87l_mrayUyKsEAalgm_HC-chhAsnTxUw';
+        String key = '';
         HttpRequest request = new HttpRequest();
         String url = 'https://maps.googleapis.com/maps/api/distancematrix/json' + '?origins=' +
          address1 + '&destinations=' + address2 + '&mode=driving' + '&sensor=false' + '&language=en' +
