@@ -1,0 +1,29 @@
+<apex:page standardController="Opportunity" extensions="GetChildOpportunities">    
+  <apex:form >
+    <apex:pageBlock title="Opportunities">
+    <apex:pageBlockTable value="{!oppList}" var="opp">
+         
+        <apex:column >
+            <apex:outputLink value="{! URLFOR($Action.Opportunity.Edit, opp.Id) }">
+                Edit
+            </apex:outputLink>
+            &nbsp;
+            <apex:outputLink value="{! URLFOR($Action.Opportunity.Delete, opp.Id) }">
+                Del
+            </apex:outputLink>
+        </apex:column>
+       <apex:column value="{!opp.Name}"/>
+      <apex:column value="{!opp.Amount}"/>
+      <apex:column value="{!opp.CloseDate}"/>
+        <apex:column >
+             <apex:inputField value="{!opp.StageName}"/>
+        </apex:column>
+     
+    </apex:pageBlockTable>
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{! saveTo }" value="Save" />        
+        </apex:pageBlockButtons>	
+</apex:pageBlock>
+              </apex:form>
+    
+</apex:page>
