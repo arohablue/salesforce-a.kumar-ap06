@@ -1,0 +1,22 @@
+<apex:page Controller="AddOppExtension" >
+     <apex:form >
+    
+    <apex:pageBlock title="Create Opportunity">
+        <apex:pageBlockSection columns="1">
+    		<apex:inputField value="{! parentOpp.Name }"/>
+    		<apex:inputField value="{! parentOpp.CloseDate }"/>        
+    		<apex:inputField value="{! parentOpp.StageName}"/> 
+            <apex:inputField value="{! parentOpp.Frequency__c}"/>   
+            <apex:inputField value="{! parentOpp.Year__C}"/>  
+            <apex:inputField value="{! parentOpp.Amount}"/>   
+		</apex:pageBlockSection>
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{! saveTo }" value="Save" />        
+        </apex:pageBlockButtons>
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!nextPage}" value="Next" />   
+ 
+        </apex:pageBlockButtons>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>
