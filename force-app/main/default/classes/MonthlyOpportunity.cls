@@ -26,7 +26,7 @@ public class MonthlyOpportunity {
         }
     
     
-    public void getOpportunitySummary(Integer lage, Integer uage){
+    public Map<Integer,Map<String, Decimal>> getOpportunitySummary(Integer lage, Integer uage){
         
         List<Id> accountIds = getAccountsOfContactBasedOnAge(lage, uage);
         Map<String, Decimal> oppSumMonthly;
@@ -60,27 +60,7 @@ public class MonthlyOpportunity {
    				}
 		}
         
-        System.debug(oppSumYearly);
-    }
-    
-    
-    
-    public  Map<Integer, Decimal> oppSumMonthlyCalc(Map<Integer,Decimal> oppSum){
-        
-        Map<Integer,Decimal> oppSumMonthly = new Map<Integer,Decimal>();
-        for(Integer month :oppSum.keySet()){
-            if(oppSumMonthly.containsKey(month)){
-                Decimal amount = oppSumMonthly.get(month);
-                oppSumMonthly.remove(month);
-                oppSumMonthly.put(month, amount + oppSum.get(month));
-            } else {
-                oppSumMonthly.put(month, oppSum.get(month));
-            }
-        }
-        
-        return oppSumMonthly;
-        
-    }
-    
+        return oppSumYearly;
+    }  
 
 }

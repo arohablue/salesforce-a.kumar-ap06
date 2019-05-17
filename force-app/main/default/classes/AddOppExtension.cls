@@ -1,7 +1,6 @@
 public class AddOppExtension {
     public Opportunity parentOpp{get; set;}
     public Id oppId {get; set;}
-    public String oppIdfetched {get; set;}
     
     public AddOppExtension(){
          parentOpp= new opportunity();

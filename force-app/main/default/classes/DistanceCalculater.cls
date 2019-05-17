@@ -16,6 +16,7 @@ public class DistanceCalculater {
 			} else if (unit == 'N') {
 				dist = dist * 0.8684;
 			}
+            System.debug(dist);
 			return (dist);
 		}
 	}
