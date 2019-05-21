@@ -136,11 +136,11 @@ public class AssignmentDml {
     Public  Opportunity createOpportunity( Decimal amount){
 	
 	    List<Opportunity> opprtunityList = new List<Opportunity>(); 
-        Date closeDate = Date.newinstance(2019,5,8);
+        Date birthDate = Date.newInstance(1995, 15, 10);
+        Date closeDate = System.today().addMonths(3);
         
-        Opportunity opp = new Opportunity( Amount = amount,  StageName = 'Prospecting', CloseDate= closeDate);
-        
-        
+        Opportunity opp = new Opportunity( Amount = amount, CloseDate = closeDate.addYears(1),  StageName = 'Prospecting', Frequency__c= 'Yearly', Year__c = '1');
+
         return opp ;
     }
     

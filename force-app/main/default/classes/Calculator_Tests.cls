@@ -37,17 +37,14 @@ public class Calculator_Tests {
                 Calculator.subtraction(nc.b, nc.a);
                 Calculator.divide(nc.b, nc.a);
                 Calculator.divide(nc.b-48, nc.a-30);
-               
                 
             } catch(Calculator.CalculatorException ce){
                 exceptions.add(true);
             }
         }
         
-        
         Test.stopTest();
-        
-        
+
     }
 
 }
