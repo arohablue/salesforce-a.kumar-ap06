@@ -1,5 +1,3 @@
-<aura:application >
-<c:helloWorld1/>
-<c:camping/>  
-<c:campingListItem/>  
+<aura:application extends= "force:slds" >
+<c:calculatorAppComponent/>
 </aura:application>

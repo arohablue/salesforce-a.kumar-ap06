@@ -1,0 +1,25 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<aura:attribute name="num1" type="Integer" />
+    <aura:attribute name="num2" type="Integer" />
+    <aura:attribute name="operation" type="String" />
+    <aura:attribute name="screen" type="String" />
+
+    <div class="slds-box">
+       <div class=" slds-p-left_small  slds-size_1-of-3">
+        <lightning:input name="screen" label="Output Screen" value="{!screen}" disabled= "true"/>
+       </div>
+       <div class = "slds-p-left_small slds-p-right_xx-small slds-p-top_small slds-size_1-of-3">
+           <lightning:input name="input" value="{!input}" label="Input Field" />
+       </div> 
+		<div class="slds-p-left_small slds-p-top_small slds-button-group" role="group">
+  			<button class="slds-button slds-button_neutral" value = "+" onclick="{!c.setOperation}">+</button>
+  			<button class="slds-button slds-button_neutral" value = "-" onclick="{!c.setOperation}">-</button>
+  			<button class="slds-button slds-button_neutral" value = "*" onclick="{!c.setOperation}">*</button>
+            <button class="slds-button slds-button_neutral" value = "/" onclick="{!c.setOperation}">/</button>
+            <button class="slds-button slds-button_neutral" value = "Ans" onclick="{!c.calculateValue}">Ans</button>
+            <button class="slds-button slds-button_neutral" value = "Clear" onclick="{!c.clearInput}">Clear</button>
+		</div>
+    </div>
+
+    
+</aura:component>
