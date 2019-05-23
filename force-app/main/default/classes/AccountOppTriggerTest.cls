@@ -11,7 +11,7 @@ public class AccountOppTriggerTest {
         accounts.add(new Account(Name = 'Test2 Account'));
         accounts.add(new Account(Name = 'Test3 Account'));
         accounts.add(new Account(Name = 'Test4 Account'));
-        //mychange is
+
         
         Date birthDate = Date.newInstance(1995, 15, 10);
         Date closeDate = System.today().addMonths(3);
@@ -43,7 +43,7 @@ public class AccountOppTriggerTest {
          Test.stopTest();
         
          System.assertNotEquals(0, exp.size());
-        
+
     }
 
 }
