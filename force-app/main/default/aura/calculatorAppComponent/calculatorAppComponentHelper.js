@@ -3,9 +3,11 @@
         var total ;
         num1 = parseInt(num1);
         num2 = parseInt(num2);
+        console.log(num1);
+        console.log(num1);
         switch(opp) {
             case "-":
-                total = num1 + num2;
+                total = num1 - num2;
             	break;
             case "+":
                 total = num1 + num2;
