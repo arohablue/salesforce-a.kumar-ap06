@@ -1,0 +1,17 @@
+<aura:component>
+    <aura:attribute name="studentName" type="String" />
+    <aura:attribute name="studentAge" type="String" />
+    <aura:attribute name="studentDob" type="Date" />
+	<aura:registerEvent name="StudentListEvent" type="c:StudentListEvent"/>
+    <aura:method name="sampleMethod" action="{!c.doAction}" description="Student Data"> 
+    	<aura:attribute name="studentData" type="Object" /> 
+	</aura:method>
+    <lightning:input type="text" id="form-element-05"  label= "Name" value = "{!v.studentName}" placeholder="Enter Name"  />
+
+    <lightning:input type="number" label= "Age" value = "{!v.studentAge}" id="form-element-05" placeholder="Enter Age"/>
+
+    <lightning:input label= "Date Of Birth" type="date" value = "{!v.studentDob}" name="dob" />
+	<!-- Success variant: Identifies a successful action -->
+ 	<lightning:button variant="success" label="Save" title="Success" onclick="{! c.saveData }"/>
+
+</aura:component>

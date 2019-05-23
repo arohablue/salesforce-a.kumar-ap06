@@ -1,0 +1,21 @@
+<aura:component >
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+     <aura:attribute name="selectedRowsCount" type="Integer" default="0"/>
+    <aura:attribute name="maxRowSelection" type="Integer" default="1"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler  event="c:StudentListEvent" action="{!c.saveEventHandler}"/>
+    <aura:registerEvent name="StudentCompEvent" type="c:StudentCompEvent"/>
+    
+    <div style="height: 300px">
+         <h1>Selected Rows: {! v.selectedRowsCount }</h1>
+        <lightning:datatable
+                keyField="id"
+                data="{! v.data }"
+                columns="{! v.columns }"
+                maxRowSelection="{! v.maxRowSelection }"
+            	onrowselection="{! c.updateSelectedText }"/>
+    </div>
+    <lightning:button variant="success" label="Delete All" title="Delete All" onclick="{! c.saveData }"/>
+	
+</aura:component>
