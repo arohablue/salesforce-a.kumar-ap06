@@ -1,0 +1,3 @@
+<design:component label="Set Intial Value">
+   <!-- <design:attribute name="screen" label="screen" description="Initial Value" />--> 
+</design:component>
