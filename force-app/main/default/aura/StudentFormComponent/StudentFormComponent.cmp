@@ -1,4 +1,85 @@
 <aura:component>
+    
+    <aura:attribute name="newStudent" type="Student__c"
+         default="{ 'sobjectType': 'Student__c',
+                  		'Id' : 0,
+                        'Name': '',
+                        'Age__c': 0,
+                        'Dob__c': '' }"/>
+       <aura:attribute name="students" type="Student__c[]"/>
+    	  <aura:attribute name="Id" type="Integer"/>
+    <aura:registerEvent name="StudentListEvent" type="c:StudentListEvent"/>
+    <aura:method name="sampleMethod" action="{!c.doAction}" description="Student Data"> 
+    	<aura:attribute name="studentData" type="Object" /> 
+	</aura:method>
+
+    <!-- PAGE HEADER -->
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="standard:scan_card" alternativeText="Student Info"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">Student Info</h1>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / PAGE HEADER -->
+    <!-- NEW EXPENSE FORM -->
+    <lightning:layout>
+        <lightning:layoutItem padding="around-small" size="12">
+            <!-- CREATE NEW EXPENSE -->
+    <div aria-labelledby="newstudentform">
+        <!-- BOXED AREA -->
+        <fieldset class="slds-box slds-theme--default slds-container--small">
+        <legend id="newstudentform" class="slds-text-heading--small 
+          slds-p-vertical--medium">
+          Add Student
+        </legend>
+  
+        <!-- CREATE NEW Student FORM -->
+        <form class="slds-form--stacked">          
+            <lightning:input aura:id="studentform" label="Student Name"
+                             name="studentname"
+                             value="{!v.newStudent.Name}"
+                             required="true"/> 
+            <lightning:input type="number" aura:id="studentform" label="Age"
+                             name="studentage"
+                             min="18"
+                             value="{!v.newStudent.Age__c}"
+                             messageWhenRangeUnderflow="Enter an age that's at least 18."/>
+            <lightning:input type="date" aura:id="expenseform" label="Student Dob"
+                             name="studentdob"
+                             value="{!v.newStudent.Dob__c}"/>
+            <lightning:button label="Create Student" 
+                              class="slds-m-top--medium"
+                              variant="brand"
+                              onclick="{!c.createStudent}"/>
+        </form>
+        <!-- / CREATE NEW EXPENSE FORM -->
+  
+      </fieldset>
+      <!-- / BOXED AREA -->
+    </div>
+    <!-- / CREATE NEW EXPENSE -->
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / NEW EXPENSE FORM -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- //
     <aura:attribute name="studentName" type="String" />
     <aura:attribute name="studentAge" type="String" />
     <aura:attribute name="studentDob" type="Date" />
@@ -11,7 +92,8 @@
     <lightning:input type="number" label= "Age" value = "{!v.studentAge}" id="form-element-05" placeholder="Enter Age"/>
 
     <lightning:input label= "Date Of Birth" type="date" value = "{!v.studentDob}" name="dob" />
-	<!-- Success variant: Identifies a successful action -->
+
  	<lightning:button variant="success" label="Save" title="Success" onclick="{! c.saveData }"/>
+	-->
 
 </aura:component>

@@ -2,12 +2,26 @@
     <aura:attribute name="data" type="Object"/>
     <aura:attribute name="columns" type="List"/>
      <aura:attribute name="selectedRowsCount" type="Integer" default="0"/>
-    <aura:attribute name="maxRowSelection" type="Integer" default="1"/>
+    <aura:attribute name="maxRowSelection" type="Integer" default="2"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <aura:handler  event="c:StudentListEvent" action="{!c.saveEventHandler}"/>
     <aura:registerEvent name="StudentCompEvent" type="c:StudentCompEvent"/>
+
+     <!-- PAGE HEADER -->
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="standard:scan_card" alternativeText="Student Info"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">Student List</h1>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / PAGE HEADER -->
+    <br/>
     
-    <div style="height: 300px">
+    <div class="slds-p-horizontal--small" style="height: 280px; Width: 800px;">
          <h1>Selected Rows: {! v.selectedRowsCount }</h1>
         <lightning:datatable
                 keyField="id"
@@ -16,6 +30,6 @@
                 maxRowSelection="{! v.maxRowSelection }"
             	onrowselection="{! c.updateSelectedText }"/>
     </div>
-    <lightning:button variant="success" label="Delete All" title="Delete All" onclick="{! c.saveData }"/>
+    <lightning:button variant="success" label="Delete All" title="Delete All" onclick="{! c.deleteAll }"/>
 	
 </aura:component>

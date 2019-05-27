@@ -1,6 +1,24 @@
 <aura:component >
-	<c:StudentFormComponent aura:id='childCmp' />
-    <c:StudentListComponent/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <aura:handler name="StudentCompEvent" event="c:StudentCompEvent" action="{!c.handleComponentEvent}"/>
+   
+        <!-- PAGE HEADER -->
+    <lightning:layout  class="slds-page-header slds-page-header--object-home">
+        <div style="height:100px; Width:140px;" >
+             <img  src="{!$Resource.imageGlow}"/>
+        </div>
+         
+
+    </lightning:layout>
+    <!-- / PAGE HEADER -->
+    
+    
+    <div class="slds-grid">
+  <div class="slds-size_1-of-3">
+    <c:StudentFormComponent aura:id='childCmp' /> 
+  </div>
+  <div class="slds-size_2-of-3 ">
+     <c:StudentListComponent />
+  </div>
+</div>
 </aura:component>
