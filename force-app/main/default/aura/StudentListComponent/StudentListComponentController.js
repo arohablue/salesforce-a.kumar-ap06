@@ -14,10 +14,10 @@
             var student = event.getParam("studentData");
             
             var studentData = {
-            'studentName' : student.studentName,
-            'studentAge' : student.studentAge,
-            'dob' : student.studentDob};
-            
+            'studentName' : student.Name,
+            'studentAge' : student.Age__c,
+            'dob' : student.Dob__c};
+            console.log("Student Data Recevied:",studentData);
             var studentList = cmp.get('v.data');
             
             if(studentList==null){
@@ -27,6 +27,8 @@
                 cmp.set('v.data',studentList);
 			  }
  
+ 			alert("Student Added");
+ 
  		} ,
  
  	updateSelectedText: function (cmp, event) {
@@ -35,8 +37,19 @@
      	var cmpEvent = cmp.getEvent("StudentCompEvent");
     	cmpEvent.setParams({'studentData':selectedRows});
     	console.log('Event Fired Selected:' ,selectedRows );
-        cmpEvent.fire();
-    }
-         
+        JSON.stringify()
+        var conf = confirm("Edit Student  : "+JSON.stringify(selectedRows[0].studentName) + "  ?");
+        
+   	 	if(selectedRows.length && conf){
+        	cmpEvent.fire();
+    	}
+        
+    },
+
+	deleteAll: function (cmp, event) {
+        cmp.set('v.data',[]);
+    },
+
+  
  
  })
