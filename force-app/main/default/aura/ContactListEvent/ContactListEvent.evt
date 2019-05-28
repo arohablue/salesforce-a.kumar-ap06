@@ -1,0 +1,5 @@
+<aura:event type="APPLICATION" description="save student Event">
+
+    <aura:attribute name="AccountId" type="String"/>
+
+</aura:event>

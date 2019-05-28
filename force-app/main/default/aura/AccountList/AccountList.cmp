@@ -1,0 +1,92 @@
+<aura:component controller="AccountsController">
+    <aura:attribute name="accounts" type="List" />
+    <aura:attribute name="accountId" type="String" />
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <aura:handler name='init' action="{!c.doInit}" value="{!this}" />
+    <aura:registerEvent name="ContactListEvent" type="c:ContactListEvent"/>
+
+    
+    <!-- Use a data table from the Lightning Design System: https://www.lightningdesignsystem.com/components/data-tables/ -->
+    <table class="slds-table slds-table_bordered slds-table_striped slds-table_cell-buffer slds-table_fixed-layout">
+        <thead>
+            <tr class="slds-text-heading_label">
+                <th scope="col"><div class="slds-truncate" title="ID">ID</div></th>
+                <th scope="col"><div class="slds-truncate" title="Name">Name</div></th>
+                <th scope="col"><div class="slds-truncate" title="Phone">Phone</div></th>
+                <th scope="col"><div class="slds-truncate" title="Get">Get Contacts</div></th>
+                <th scope="col"><div class="slds-truncate" title="Add">Add Contact</div></th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Use the Apex model and controller to fetch server side data -->
+            <aura:iteration items="{!v.accounts}" var="account">
+                <tr>
+                    <th scope="row"><div class="slds-truncate" title="{!account.Id}">{!account.Id}</div></th>
+                    <td><div class="slds-truncate" title="{!account.Name}">{!account.Name}</div></td>
+                    <td><div class="slds-truncate" title="{!account.Phone}">{!account.Phone}</div></td>
+                    <td>
+                        <form class="contact-form" onsubmit="{!c.fetchContacts}">
+                            <input type="hidden" value="{!account.Id}" class="account-id" />
+                            <!-- Use a Lightning Base Component To display an icon next to the label -->
+                            <lightning:button
+                                              label="Get contacts"
+                                              iconPosition="left"
+                                              variant="destructive"
+                                              type="submit"
+                                              />
+                        </form>
+                    </td>
+                    <td>
+                        <form class="newcontact-form" onsubmit="{!c.createRecord}">
+                            <input type="hidden" value="{!account.Id}" class="account-id" />
+                            <!-- Use a Lightning Base Component To display an icon next to the label -->
+                            <lightning:button
+                                              label="Add Contact"
+                                              iconPosition="left"
+                                              variant="destructive"
+                                              type="submit"
+                                              />
+                        </form>
+                    </td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+    
+    <div class="slds">
+        <div aria-hidden="true" role="dialog" class="slds-modal slds-modal--prompt slds-fade-in-hide" aura:id="modaldialog">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header slds-theme--info">
+                    
+                    <h2 class="slds-text-heading--medium">Create Contact</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div>                                     
+                        <lightning:recordForm 
+                                              record-id	= ""
+                                              objectApiName="Contact" 
+                                              layoutType="Compact" 
+                                              fields="{!v.myContact}"
+                                              columns="1"
+                                              mode="create"
+                                              
+                                               onsuccess="{!c.handleSuccess}" />
+                    </div>
+                </div>
+                
+                <div class="slds-modal__footer slds-theme--info">
+                    
+                    <lightning:button
+                                      label="Close"
+                                      iconPosition="left"
+                                      variant="destructive"
+                                      onclick="{!c.closePopUp}"/>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+</aura:component>
