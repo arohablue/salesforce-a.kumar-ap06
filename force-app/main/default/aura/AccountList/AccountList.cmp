@@ -1,12 +1,14 @@
-<aura:component controller="AccountsController">
+<aura:component controller="AccountsController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global">
     <aura:attribute name="accounts" type="List" />
     <aura:attribute name="accountId" type="String" />
     <lightning:overlayLibrary aura:id="overlayLib"/>
-    <aura:handler name='init' action="{!c.doInit}" value="{!this}" />
-    <aura:registerEvent name="ContactListEvent" type="c:ContactListEvent"/>
+    <aura:attribute name="componentHeader" type="String" />
+	<aura:attribute name="defaultRecordSize" type="String" />
 
     
-    <!-- Use a data table from the Lightning Design System: https://www.lightningdesignsystem.com/components/data-tables/ -->
+    <aura:registerEvent name="ContactListEvent" type="c:ContactListEvent"/>
+    <aura:handler name='init' action="{!c.doInit}" value="{!this}"/>
+    <h1>{!v.componentHeader}</h1>
     <table class="slds-table slds-table_bordered slds-table_striped slds-table_cell-buffer slds-table_fixed-layout">
         <thead>
             <tr class="slds-text-heading_label">
