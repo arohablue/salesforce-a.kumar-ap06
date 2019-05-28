@@ -1,10 +1,18 @@
 <aura:component controller="AccountsController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global">
     <aura:attribute name="accounts" type="List" />
+    <aura:attribute name="lessAccounts" type="List" />
+    <aura:attribute name="allAccounts" type="List" />
     <aura:attribute name="accountId" type="String" />
     <lightning:overlayLibrary aura:id="overlayLib"/>
     <aura:attribute name="componentHeader" type="String" />
 	<aura:attribute name="defaultRecordSize" type="String" />
-
+	<aura:attribute name="newContact" type="Contact"
+         default="{ 'sobjectType': 'Contact',
+                        'FirstName': '',
+                  		'LastName': '',
+                        'Email':'',
+                  		'Phone':'',
+                        'AccountId': ''}"/>
     
     <aura:registerEvent name="ContactListEvent" type="c:ContactListEvent"/>
     <aura:handler name='init' action="{!c.doInit}" value="{!this}"/>
@@ -22,11 +30,11 @@
         </thead>
         <tbody>
             <!-- Use the Apex model and controller to fetch server side data -->
-            <aura:iteration items="{!v.accounts}" var="account">
+            <aura:iteration items="{!v.accounts}" var="account"  indexVar="idx">
                 <tr>
                     <th scope="row"><div class="slds-truncate" title="{!account.Id}">{!account.Id}</div></th>
                     <td><div class="slds-truncate" title="{!account.Name}">{!account.Name}</div></td>
-                    <td><div class="slds-truncate" title="{!account.Phone}">{!account.Phone}</div></td>
+					<td><div class="slds-truncate" title="{!account.Phone}">{!account.Phone}</div></td>
                     <td>
                         <form class="contact-form" onsubmit="{!c.fetchContacts}">
                             <input type="hidden" value="{!account.Id}" class="account-id" />
@@ -40,7 +48,7 @@
                         </form>
                     </td>
                     <td>
-                        <form class="newcontact-form" onsubmit="{!c.createRecord}">
+                        <form class="newcontact-form" onsubmit="{!c.createContacts}">
                             <input type="hidden" value="{!account.Id}" class="account-id" />
                             <!-- Use a Lightning Base Component To display an icon next to the label -->
                             <lightning:button
@@ -53,8 +61,20 @@
                     </td>
                 </tr>
             </aura:iteration>
+                 
         </tbody>
     </table>
+    
+                <lightning:button
+                              label="Load More.."
+                              class="slds-m-top--medium"
+                              variant="destructive"
+                              onclick="{!c.showMore}"/>
+                  <lightning:button
+                              label="Show Less.."
+                              class="slds-m-top--medium"
+                              variant="destructive"
+                              onclick="{!c.showLess}"/>
     
     <div class="slds">
         <div aria-hidden="true" role="dialog" class="slds-modal slds-modal--prompt slds-fade-in-hide" aura:id="modaldialog">
@@ -65,30 +85,36 @@
                 </div>
                 <div class="slds-modal__content slds-p-around--medium">
                     <div>                                     
-                        <lightning:recordForm 
-                                              record-id	= ""
-                                              objectApiName="Contact" 
-                                              layoutType="Compact" 
-                                              fields="{!v.myContact}"
-                                              columns="1"
-                                              mode="create"
-                                              
-                                               onsuccess="{!c.handleSuccess}" />
-                    </div>
+                                <!-- CREATE NEW Student FORM -->
+        <form class="slds-form--stacked">          
+            <lightning:input aura:id="contactform" label="First Name"
+                             name="contactname"
+                             value="{!v.newContact.FirstName}"
+                             required="true"/> 
+            <lightning:input aura:id="contactform" label="Last Name"
+                             name="contactname"
+                             value="{!v.newContact.LastName}"
+                             required="true"/> 
+            <lightning:input type="text" aura:id="contactform" label="Email"
+                             name="contactEmail"
+                             value="{!v.newContact.Email}"/>
+            <lightning:input type="phone" aura:id="contactform" label="Phone"
+                             name="contactPhone" 
+                             value="{!v.newContact.Phone}"/>
+            <lightning:button label="Save" 
+                              class="slds-m-top--medium"
+                              variant="brand"
+                              onclick="{!c.createNewContact}"/>                 
+            <lightning:button
+                              label="Cancel"
+                              class="slds-m-top--medium"
+                              variant="destructive"
+                              onclick="{!c.closePopUp}"/>
+        </form>
                 </div>
-                
-                <div class="slds-modal__footer slds-theme--info">
-                    
-                    <lightning:button
-                                      label="Close"
-                                      iconPosition="left"
-                                      variant="destructive"
-                                      onclick="{!c.closePopUp}"/>
-                </div>
-                
             </div>
         </div>
     </div>
-    
+    </div>
     
 </aura:component>
