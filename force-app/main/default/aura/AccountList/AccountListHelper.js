@@ -7,7 +7,7 @@
         var self = this;
         action.setCallback(this, function(actionResult) {
             var accounts = actionResult.getReturnValue();
-            var lessAccounts = accounts.slice(0,10)
+            var lessAccounts = accounts.slice(0,component.get('v.defaultRecordSize'))
          	component.set('v.accounts',lessAccounts);
             component.set('v.lessAccounts',lessAccounts);
             component.set('v.allAccounts',accounts);
@@ -55,7 +55,12 @@
         action.setCallback(this, function(actionResult) {
             if("true" == actionResult.getReturnValue()){
                 var newContact = component.set("v.newContact", "");
-               
+                var toastEvent = $A.get("e.force:showToast");
+    			toastEvent.setParams({
+        		"title": "Success!",
+        		"message": "Contact Added successfully."
+   				 	});
+    			toastEvent.fire();
                }
         });
         
