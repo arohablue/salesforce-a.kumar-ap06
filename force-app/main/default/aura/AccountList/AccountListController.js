@@ -2,6 +2,7 @@
     doInit: function(component, event, helper) {
         // Fetch the account list from the Apex controller
         helper.getAccountList(component);
+        component.set('v.defaultRecordSize',10)
     },
     fetchContacts: function(component, event, helper) {
         // Prevent the form from getting submitted
@@ -55,7 +56,6 @@
             helper.createContactForAccount(component)  
        	}
     },
-    
      showLess: function(component, componentId, className){
 		 var accounts = component.get('v.lessAccounts');
          component.set('v.accounts',accounts);

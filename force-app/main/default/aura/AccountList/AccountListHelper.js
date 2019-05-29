@@ -37,7 +37,7 @@
       createContactForAccount : function(component) {
         var newContact = component.get("v.newContact");
         var accountId = component.get("v.accountId");
-        var action = component.get('c.getContacts');
+        var action = component.get('c.addContacts');
         	
         // Set up the callback
         var contactString = { 'FirstName':newContact.FirstName,
@@ -54,14 +54,37 @@
         
         action.setCallback(this, function(actionResult) {
             if("true" == actionResult.getReturnValue()){
-                var newContact = component.set("v.newContact", "");
+                
+               var newCont =  { 'sobjectType': 'Contact',
+                        'FirstName': '',
+                  		'LastName': '',
+                        'Email':'',
+                  		'Phone':'',
+                        'AccountId': ''}
+                
+                var newContact = component.set("v.newContact", newCont);
                 var toastEvent = $A.get("e.force:showToast");
     			toastEvent.setParams({
         		"title": "Success!",
         		"message": "Contact Added successfully."
    				 	});
     			toastEvent.fire();
-               }
+            } else {
+                  var newCont =  { 'sobjectType': 'Contact',
+                        'FirstName': '',
+                  		'LastName': '',
+                        'Email':'',
+                  		'Phone':'',
+                        'AccountId': ''}
+                console.log('here');
+                var newContact = component.set("v.newContact", newCont);
+                var toastEvent = $A.get("e.force:showToast");
+    			toastEvent.setParams({
+        		"title": "Failure!",
+        		"message": "Contact Limit reached."
+   				 	});
+    			toastEvent.fire();
+            }
         });
         
         $A.enqueueAction(action);  
