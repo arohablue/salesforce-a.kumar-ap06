@@ -1,0 +1,4 @@
+<design:component label= "Account List">
+     <design:attribute default= "Account" name="componentHeader" label="Title of Component" description="Title of the Component" />
+     <design:attribute name="defaultRecordSize" label="Record Size" description="Size of the Records" datasource = "5,10,15"/>
+</design:component>
